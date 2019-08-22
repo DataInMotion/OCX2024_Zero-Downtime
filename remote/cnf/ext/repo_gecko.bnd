@@ -1,0 +1,6 @@
+-plugin.gecko: \
+	aQute.bnd.repository.maven.provider.MavenBndRepository;\
+		releaseUrl=https://devel.data-in-motion.biz/nexus/repository/maven-releases/;\
+		snapshotUrl=https://devel.data-in-motion.biz/nexus/repository/maven-snapshots/;\
+		index=${.}/dim_nexus.maven;\
+		name='DIM_Nexus'

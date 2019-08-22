@@ -1,0 +1,21 @@
+{
+  ":configurator:resource-version": 1,
+  
+	"MQTTService":
+	{
+		"ma.id" : "dim_mqtt",
+		"brokerUrl" : "tcp://devel.data-in-motion.biz:1883",
+		"username" : "demo",
+		"password" : "1234"
+	},
+  "MessageAdapterDiscovery": 
+  	{
+	    "name": "test",
+	    "messaging.target":"(ma.id=dim_mqtt)"
+	},
+  "MessagingRSAProvider": 
+  	{
+	    "name": "testRSA",
+	    "messaging.target":"(ma.id=dim_mqtt)"
+	}
+}

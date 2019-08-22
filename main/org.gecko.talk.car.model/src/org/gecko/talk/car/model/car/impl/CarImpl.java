@@ -24,6 +24,7 @@ import org.gecko.talk.car.model.car.Person;
  *   <li>{@link org.gecko.talk.car.model.car.impl.CarImpl#getId <em>Id</em>}</li>
  *   <li>{@link org.gecko.talk.car.model.car.impl.CarImpl#getType <em>Type</em>}</li>
  *   <li>{@link org.gecko.talk.car.model.car.impl.CarImpl#getOwner <em>Owner</em>}</li>
+ *   <li>{@link org.gecko.talk.car.model.car.impl.CarImpl#getSourceContainer <em>Source Container</em>}</li>
  * </ul>
  *
  * @generated
@@ -78,6 +79,26 @@ public class CarImpl extends MinimalEObjectImpl.Container implements Car {
 	 * @ordered
 	 */
 	protected Person owner;
+
+	/**
+	 * The default value of the '{@link #getSourceContainer() <em>Source Container</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSourceContainer()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String SOURCE_CONTAINER_EDEFAULT = "none";
+
+	/**
+	 * The cached value of the '{@link #getSourceContainer() <em>Source Container</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSourceContainer()
+	 * @generated
+	 * @ordered
+	 */
+	protected String sourceContainer = SOURCE_CONTAINER_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -195,6 +216,29 @@ public class CarImpl extends MinimalEObjectImpl.Container implements Car {
 	 * @generated
 	 */
 	@Override
+	public String getSourceContainer() {
+		return sourceContainer;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setSourceContainer(String newSourceContainer) {
+		String oldSourceContainer = sourceContainer;
+		sourceContainer = newSourceContainer;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CarPackage.CAR__SOURCE_CONTAINER, oldSourceContainer, sourceContainer));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case CarPackage.CAR__OWNER:
@@ -217,6 +261,8 @@ public class CarImpl extends MinimalEObjectImpl.Container implements Car {
 				return getType();
 			case CarPackage.CAR__OWNER:
 				return getOwner();
+			case CarPackage.CAR__SOURCE_CONTAINER:
+				return getSourceContainer();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -239,6 +285,9 @@ public class CarImpl extends MinimalEObjectImpl.Container implements Car {
 			case CarPackage.CAR__OWNER:
 				setOwner((Person)newValue);
 				return;
+			case CarPackage.CAR__SOURCE_CONTAINER:
+				setSourceContainer((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -260,6 +309,9 @@ public class CarImpl extends MinimalEObjectImpl.Container implements Car {
 			case CarPackage.CAR__OWNER:
 				setOwner((Person)null);
 				return;
+			case CarPackage.CAR__SOURCE_CONTAINER:
+				setSourceContainer(SOURCE_CONTAINER_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -278,6 +330,8 @@ public class CarImpl extends MinimalEObjectImpl.Container implements Car {
 				return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
 			case CarPackage.CAR__OWNER:
 				return owner != null;
+			case CarPackage.CAR__SOURCE_CONTAINER:
+				return SOURCE_CONTAINER_EDEFAULT == null ? sourceContainer != null : !SOURCE_CONTAINER_EDEFAULT.equals(sourceContainer);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -296,6 +350,8 @@ public class CarImpl extends MinimalEObjectImpl.Container implements Car {
 		result.append(id);
 		result.append(", type: ");
 		result.append(type);
+		result.append(", sourceContainer: ");
+		result.append(sourceContainer);
 		result.append(')');
 		return result.toString();
 	}

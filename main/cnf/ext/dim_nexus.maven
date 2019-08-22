@@ -54,16 +54,16 @@ org.gecko.ma:org.gecko.adapter.amqp:2.0.2-SNAPSHOT
 org.gecko.ma:org.gecko.adapter.mqtt:1.0.3-SNAPSHOT
 org.gecko.ma:org.gecko.osgi.messaging:3.1.0-SNAPSHOT
 
-org.gecko.rsa:org.gecko.rsa.api:2.1.0-SNAPSHOT
-org.gecko.rsa:org.gecko.rsa.model:1.0.2-SNAPSHOT
-org.gecko.rsa:org.gecko.rsa.core:2.0.0-SNAPSHOT
-org.gecko.rsa:org.gecko.rsa.discovery:1.0.0-SNAPSHOT
+org.gecko.rsa:org.gecko.rsa.api:2.1.0
+org.gecko.rsa:org.gecko.rsa.model:1.0.2
+org.gecko.rsa:org.gecko.rsa.core:2.0.0
+org.gecko.rsa:org.gecko.rsa.discovery:1.0.0
 org.gecko.rsa:org.gecko.rsa.provider:1.1.6-SNAPSHOT
-org.gecko.rsa:org.gecko.rsa.discovery.ma:2.0.1-SNAPSHOT
-org.gecko.rsa:org.gecko.rsa.discovery.config:1.0.2-SNAPSHOT
-org.apache.aries.rsa:org.apache.aries.rsa.core:1.13.0
-org.apache.aries.rsa:org.apache.aries.rsa.spi:1.13.0
-org.apache.aries.rsa:org.apache.aries.rsa.topology-manager:1.13.0
+org.gecko.rsa:org.gecko.rsa.discovery.ma:2.0.1
+org.gecko.rsa:org.gecko.rsa.discovery.config:1.0.2
+org.apache.aries.rsa:org.apache.aries.rsa.core:1.14.0
+org.apache.aries.rsa:org.apache.aries.rsa.spi:1.14.0
+org.apache.aries.rsa:org.apache.aries.rsa.topology-manager:1.15.0-SNAPSHOT
 com.rabbitmq:amqp-client:5.6.0
 org.slf4j:slf4j-simple:1.7.25
 commons-logging:commons-logging:1.2

@@ -147,6 +147,16 @@ public class CarPackageImpl extends EPackageImpl implements CarPackage {
 	 * @generated
 	 */
 	@Override
+	public EAttribute getCar_SourceContainer() {
+		return (EAttribute)carEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getPerson() {
 		return personEClass;
 	}
@@ -234,6 +244,7 @@ public class CarPackageImpl extends EPackageImpl implements CarPackage {
 		createEAttribute(carEClass, CAR__ID);
 		createEAttribute(carEClass, CAR__TYPE);
 		createEReference(carEClass, CAR__OWNER);
+		createEAttribute(carEClass, CAR__SOURCE_CONTAINER);
 
 		personEClass = createEClass(PERSON);
 		createEAttribute(personEClass, PERSON__ID);
@@ -278,6 +289,7 @@ public class CarPackageImpl extends EPackageImpl implements CarPackage {
 		initEAttribute(getCar_Id(), ecorePackage.getEString(), "id", null, 0, 1, Car.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCar_Type(), ecorePackage.getEString(), "type", null, 0, 1, Car.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCar_Owner(), this.getPerson(), null, "owner", null, 1, 1, Car.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCar_SourceContainer(), ecorePackage.getEString(), "sourceContainer", "none", 0, 1, Car.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(personEClass, Person.class, "Person", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPerson_Id(), ecorePackage.getEString(), "id", null, 0, 1, Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

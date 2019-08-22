@@ -1,0 +1,15 @@
+-buildpath: \
+	osgi.annotation;version=7.0,\
+	osgi.core;version=7.0,\
+	osgi.cmpn;version=7.0,\
+	org.gecko.talk.car.service.api,\
+	org.gecko.talk.car.model
+
+# This is the version of JUnit that will be used at build time and run time
+junit: org.apache.servicemix.bundles.junit;version="[4.11,5)"
+
+-testpath: \
+	${junit}
+
+Bundle-Version: 1.0.0.SNAPSHOT
+Private-Package: org.gecko.talk.custom.car.service

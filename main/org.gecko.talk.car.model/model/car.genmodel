@@ -11,6 +11,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute car.ecore#//Car/id"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute car.ecore#//Car/type"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference car.ecore#//Car/owner"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute car.ecore#//Car/sourceContainer"/>
     </genClasses>
     <genClasses ecoreClass="car.ecore#//Person">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute car.ecore#//Person/id"/>

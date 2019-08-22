@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.gecko.talk.car.model.car.Car#getId <em>Id</em>}</li>
  *   <li>{@link org.gecko.talk.car.model.car.Car#getType <em>Type</em>}</li>
  *   <li>{@link org.gecko.talk.car.model.car.Car#getOwner <em>Owner</em>}</li>
+ *   <li>{@link org.gecko.talk.car.model.car.Car#getSourceContainer <em>Source Container</em>}</li>
  * </ul>
  *
  * @see org.gecko.talk.car.model.car.CarPackage#getCar()
@@ -88,5 +89,28 @@ public interface Car extends EObject {
 	 * @generated
 	 */
 	void setOwner(Person value);
+
+	/**
+	 * Returns the value of the '<em><b>Source Container</b></em>' attribute.
+	 * The default value is <code>"none"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Source Container</em>' attribute.
+	 * @see #setSourceContainer(String)
+	 * @see org.gecko.talk.car.model.car.CarPackage#getCar_SourceContainer()
+	 * @model default="none"
+	 * @generated
+	 */
+	String getSourceContainer();
+
+	/**
+	 * Sets the value of the '{@link org.gecko.talk.car.model.car.Car#getSourceContainer <em>Source Container</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Source Container</em>' attribute.
+	 * @see #getSourceContainer()
+	 * @generated
+	 */
+	void setSourceContainer(String value);
 
 } // Car

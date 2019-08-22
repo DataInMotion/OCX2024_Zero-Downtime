@@ -43,7 +43,7 @@ import org.osgi.service.jaxrs.whiteboard.propertytypes.JaxrsResource;
 @Path("/")
 public class CarResource {
 
-//	@Reference
+	@Reference
 	private CarWhiteboard whiteboard;
 	
 	@GET

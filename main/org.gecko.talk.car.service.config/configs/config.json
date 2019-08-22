@@ -1,0 +1,18 @@
+{
+  ":configurator:resource-version": 1,
+  
+	"CarService~Opel1" : {
+		"car.type" : "Opel Corsa",
+		"owner.name" : "Klaus"
+	},
+	"CarService~Opel2" : {
+		"car.type" : "Opel Astra",
+		"owner.name" : "Klaus"
+	},
+	"CarService~Mazda" : {
+		"car.type" : "Mazda 6",
+		"owner.name" : "Thomas"
+	},
+	"CarService~default" : {
+	}
+}

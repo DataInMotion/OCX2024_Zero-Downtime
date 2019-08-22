@@ -27,15 +27,19 @@ public class CarServiceImpl implements CarServiceApi{
 	private Car theCar;
 	
 	private @interface Config {
-		String carType() default "Trabant 601"; 
-		String ownerName() default "Max Mustermann";
+		String car_type() default "Trabant 601"; 
+		String owner_name() default "Max Mustermann";
 	}
 	
 	@Activate
 	public void activate(Config config) {
-		System.out.println(String.format("starting with config carType [%s] owner [%s]!", config.carType(), config.ownerName()));
-		Car car = createCar(config.carType());
-		car.setOwner(createPerson(config.ownerName()));
+		String containerName = System.getProperty("talk.container.name");
+		System.out.println(String.format("starting with config carType [%s] owner [%s]!", config.car_type(), config.owner_name()));
+		Car car = createCar(config.car_type());
+		if(containerName != null) {
+			car.setSourceContainer(containerName);
+		}
+		car.setOwner(createPerson(config.owner_name()));
 		theCar = car;
 		System.out.println("started");
 	}

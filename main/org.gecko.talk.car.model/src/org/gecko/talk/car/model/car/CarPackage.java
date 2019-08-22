@@ -94,13 +94,22 @@ public interface CarPackage extends EPackage {
 	int CAR__OWNER = 2;
 
 	/**
+	 * The feature id for the '<em><b>Source Container</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAR__SOURCE_CONTAINER = 3;
+
+	/**
 	 * The number of structural features of the '<em>Car</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CAR_FEATURE_COUNT = 3;
+	int CAR_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Car</em>' class.
@@ -248,6 +257,17 @@ public interface CarPackage extends EPackage {
 	EReference getCar_Owner();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.gecko.talk.car.model.car.Car#getSourceContainer <em>Source Container</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Source Container</em>'.
+	 * @see org.gecko.talk.car.model.car.Car#getSourceContainer()
+	 * @see #getCar()
+	 * @generated
+	 */
+	EAttribute getCar_SourceContainer();
+
+	/**
 	 * Returns the meta object for class '{@link org.gecko.talk.car.model.car.Person <em>Person</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -364,6 +384,13 @@ public interface CarPackage extends EPackage {
 		 * @generated
 		 */
 		EReference CAR__OWNER = eINSTANCE.getCar_Owner();
+		/**
+		 * The meta object literal for the '<em><b>Source Container</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CAR__SOURCE_CONTAINER = eINSTANCE.getCar_SourceContainer();
 		/**
 		 * The meta object literal for the '{@link org.gecko.talk.car.model.car.impl.PersonImpl <em>Person</em>}' class.
 		 * <!-- begin-user-doc -->
