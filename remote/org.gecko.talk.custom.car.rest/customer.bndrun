@@ -36,12 +36,11 @@
 	bnd.identity;id='org.gecko.talk.car.remote.config',\
 	bnd.identity;id='org.gecko.talk.custom.car.rest',\
 	bnd.identity;id='org.gecko.talk.car.whiteboard.api',\
-	bnd.identity;id='org.gecko.talk.car.whiteboard.impl'
+	bnd.identity;id='org.gecko.talk.car.whiteboard.impl',\
+	bnd.identity;id='org.gecko.talk.custom.car.service'
 	
 -resolve.effective: active;skip:="osgi.service"
 -runbundles: \
-	org.apache.aries.rsa.core;version='[1.14.0,1.14.1)',\
-	org.apache.aries.rsa.spi;version='[1.14.0,1.14.1)',\
 	org.apache.felix.configadmin;version='[1.9.10,1.9.11)',\
 	org.apache.felix.configurator;version='[1.0.8,1.0.9)',\
 	org.gecko.rsa.provider;version='[1.1.6,1.1.7)',\
@@ -72,7 +71,6 @@
 	org.osgi.util.function;version='[1.1.0,1.1.1)',\
 	org.osgi.util.promise;version='[1.1.0,1.1.1)',\
 	org.osgi.util.pushstream;version='[1.0.0,1.0.1)',\
-	org.apache.aries.rsa.topology-manager;version='[1.15.0,1.15.1)',\
 	com.fasterxml.jackson.core.jackson-annotations;version='[2.9.7,2.9.8)',\
 	com.fasterxml.jackson.core.jackson-core;version='[2.9.7,2.9.8)',\
 	com.fasterxml.jackson.core.jackson-databind;version='[2.9.7,2.9.8)',\
@@ -81,7 +79,6 @@
 	com.sun.activation.javax.activation;version='[1.2.0,1.2.1)',\
 	javax.annotation-api;version='[1.3.2,1.3.3)',\
 	javax.validation.api;version='[1.1.0,1.1.1)',\
-	javax.ws.rs-api;version='[2.1.0,2.1.1)',\
 	jaxb-api;version='[2.3.1,2.3.2)',\
 	org.apache.felix.http.jetty;version='[4.0.6,4.0.7)',\
 	org.apache.felix.http.servlet-api;version='[1.1.2,1.1.3)',\
@@ -95,8 +92,12 @@
 	org.gecko.talk.car.service.api;version='[1.0.0,1.0.1)',\
 	org.gecko.talk.custom.car.rest;version=snapshot,\
 	org.glassfish.jersey.bundles.jaxrs-ri;version='[2.26.0,2.26.1)',\
-	org.glassfish.jersey.core.jersey-client;version='[2.26.0,2.26.1)',\
 	org.yaml.snakeyaml;version='[1.23.0,1.23.1)',\
 	org.gecko.talk.car.whiteboard.api;version='[1.0.0,1.0.1)',\
-	org.gecko.talk.car.whiteboard.impl;version='[1.0.0,1.0.1)'
+	org.gecko.talk.car.whiteboard.impl;version='[1.0.0,1.0.1)',\
+	javax.activation-api;version='[1.2.0,1.2.1)',\
+	org.apache.aries.rsa.core;version='[1.16.1,1.16.2)',\
+	org.apache.aries.rsa.spi;version='[1.16.1,1.16.2)',\
+	org.apache.aries.rsa.topology-manager;version='[1.16.1,1.16.2)',\
+	org.gecko.talk.custom.car.service;version=snapshot
 -resolve: auto

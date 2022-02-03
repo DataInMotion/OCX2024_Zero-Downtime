@@ -1,8 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="Local" increment="1566482422749">
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="Local" increment="1643898853782">
   <resource>
     <capability namespace="osgi.identity">
       <attribute name="license" value="Eclipse Public License 1.0"/>
+      <attribute name="copyright" value="Data In Motion GmbH all rights reserved"/>
       <attribute name="osgi.identity" value="org.gecko.talk.car.whiteboard.impl"/>
       <attribute name="type" value="osgi.bundle"/>
       <attribute name="version" value="1.0.0.SNAPSHOT" type="Version"/>
@@ -15,23 +16,33 @@
       <attribute name="bundle-version" value="1.0.0.SNAPSHOT" type="Version"/>
       <attribute name="osgi.wiring.host" value="org.gecko.talk.car.whiteboard.impl"/>
     </capability>
-    <capability namespace="osgi.service">
-      <attribute name="objectClass" value="org.gecko.talk.car.whiteboard.api.CarWhiteboard" type="List&lt;String&gt;"/>
-    </capability>
     <capability namespace="osgi.content">
-      <attribute name="size" value="12117" type="Long"/>
+      <attribute name="size" value="12144" type="Long"/>
       <attribute name="url" value="org.gecko.talk.car.whiteboard.impl/org.gecko.talk.car.whiteboard.impl-1.0.0.jar"/>
       <attribute name="mime" value="application/vnd.osgi.bundle"/>
-      <attribute name="osgi.content" value="475609EABA8F70E613FA9F4FE782841AA1100D53C51256D6F7BC003ECD1C87DD"/>
+      <attribute name="osgi.content" value="98C2B268BDAEC0B20F7CFC4D6F84B4986910EF4FC79D87437C7810E1A48D1097"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <directive name="uses" value="org.gecko.talk.car.whiteboard.api"/>
+      <attribute name="objectClass" value="org.gecko.talk.car.whiteboard.api.CarWhiteboard" type="List&lt;String&gt;"/>
     </capability>
     <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.gecko.talk.car.model.car)(&amp;(version&gt;=1.0.0)(!(version&gt;=2.0.0))))"/>
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.gecko.talk.car.model.car)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.talk.car.model.car"/>
     </requirement>
     <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.gecko.talk.car.service.api)(&amp;(version&gt;=1.0.0)(!(version&gt;=2.0.0))))"/>
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.gecko.talk.car.service.api)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.talk.car.service.api"/>
     </requirement>
     <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.gecko.talk.car.whiteboard.api)(&amp;(version&gt;=1.0.0)(!(version&gt;=1.1.0))))"/>
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.gecko.talk.car.whiteboard.api)(version&gt;=1.0.0)(!(version&gt;=1.1.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.talk.car.whiteboard.api"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+    <requirement namespace="osgi.extender">
+      <directive name="filter" value="(&amp;(osgi.extender=osgi.component)(version&gt;=1.4.0)(!(version&gt;=2.0.0)))"/>
     </requirement>
     <requirement namespace="osgi.service">
       <directive name="filter" value="(objectClass=org.gecko.talk.car.service.api.CarServiceApi)"/>
@@ -39,16 +50,11 @@
       <directive name="resolution" value="optional"/>
       <directive name="cardinality" value="multiple"/>
     </requirement>
-    <requirement namespace="osgi.extender">
-      <directive name="filter" value="(&amp;(osgi.extender=osgi.component)(version&gt;=1.4.0)(!(version&gt;=2.0.0)))"/>
-    </requirement>
-    <requirement namespace="osgi.ee">
-      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
-    </requirement>
   </resource>
   <resource>
     <capability namespace="osgi.identity">
       <attribute name="license" value="Eclipse Public License 1.0"/>
+      <attribute name="copyright" value="Data In Motion GmbH all rights reserved"/>
       <attribute name="osgi.identity" value="org.gecko.car.service.config"/>
       <attribute name="type" value="osgi.bundle"/>
       <attribute name="version" value="1.0.0.SNAPSHOT" type="Version"/>
@@ -65,7 +71,7 @@
       <attribute name="size" value="7417" type="Long"/>
       <attribute name="url" value="org.gecko.car.service.config/org.gecko.car.service.config-1.0.0.jar"/>
       <attribute name="mime" value="application/vnd.osgi.bundle"/>
-      <attribute name="osgi.content" value="DAE6787D769F999F52CCBE579E4C93BDF19C771C343A026378F9797C7FEC501D"/>
+      <attribute name="osgi.content" value="91F902B69E6CDC58BD0249EC64E4A85D7E663DA28A4BD02445123843D68E8E90"/>
     </capability>
     <requirement namespace="osgi.extender">
       <directive name="filter" value="(osgi.extender=osgi.configurator)"/>
@@ -74,6 +80,7 @@
   <resource>
     <capability namespace="osgi.identity">
       <attribute name="license" value="Eclipse Public License 1.0"/>
+      <attribute name="copyright" value="Data In Motion GmbH all rights reserved"/>
       <attribute name="osgi.identity" value="org.gecko.talk.rest"/>
       <attribute name="type" value="osgi.bundle"/>
       <attribute name="version" value="1.0.0.SNAPSHOT" type="Version"/>
@@ -86,36 +93,35 @@
       <attribute name="bundle-version" value="1.0.0.SNAPSHOT" type="Version"/>
       <attribute name="osgi.wiring.host" value="org.gecko.talk.rest"/>
     </capability>
-    <capability namespace="osgi.service">
-      <attribute name="objectClass" value="org.gecko.talk.rest.CarResource" type="List&lt;String&gt;"/>
-    </capability>
     <capability namespace="osgi.content">
-      <attribute name="size" value="12037" type="Long"/>
+      <attribute name="size" value="12119" type="Long"/>
       <attribute name="url" value="org.gecko.talk.rest/org.gecko.talk.rest-1.0.0.jar"/>
       <attribute name="mime" value="application/vnd.osgi.bundle"/>
-      <attribute name="osgi.content" value="7DADDF00A3EF670DA9384EF6589AE7D39F63DF8A8CA34607849D6A06A081C8F5"/>
+      <attribute name="osgi.content" value="FA9C008618AD4CCC630B7B82ED28E68525980346DEEF338B19CFB46D4E5C5F93"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <directive name="uses" value="org.gecko.talk.rest"/>
+      <attribute name="objectClass" value="org.gecko.talk.rest.CarResource" type="List&lt;String&gt;"/>
     </capability>
     <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=javax.ws.rs)(&amp;(version&gt;=2.1.0)(!(version&gt;=3.0.0))))"/>
+      <directive name="filter" value="(&amp;(osgi.wiring.package=javax.ws.rs)(version&gt;=2.1.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="javax.ws.rs"/>
     </requirement>
     <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=javax.ws.rs.core)(&amp;(version&gt;=2.1.0)(!(version&gt;=3.0.0))))"/>
+      <directive name="filter" value="(&amp;(osgi.wiring.package=javax.ws.rs.core)(version&gt;=2.1.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="javax.ws.rs.core"/>
     </requirement>
     <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.emf.common.util))"/>
+      <directive name="filter" value="(osgi.wiring.package=org.eclipse.emf.common.util)"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.common.util"/>
     </requirement>
     <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.gecko.talk.car.model.car)(&amp;(version&gt;=1.0.0)(!(version&gt;=2.0.0))))"/>
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.gecko.talk.car.model.car)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.talk.car.model.car"/>
     </requirement>
     <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.gecko.talk.car.whiteboard.api)(&amp;(version&gt;=1.0.0)(!(version&gt;=2.0.0))))"/>
-    </requirement>
-    <requirement namespace="osgi.extender">
-      <directive name="filter" value="(osgi.extender=osgi.configurator)"/>
-    </requirement>
-    <requirement namespace="osgi.service">
-      <directive name="filter" value="(objectClass=org.gecko.talk.car.whiteboard.api.CarWhiteboard)"/>
-      <directive name="effective" value="active"/>
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.gecko.talk.car.whiteboard.api)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.talk.car.whiteboard.api"/>
     </requirement>
     <requirement namespace="emf.configurator">
       <directive name="filter" value="(&amp;(emf.configurator.name=EMFJson)(emf.configurator=resourceSet))"/>
@@ -123,22 +129,54 @@
     <requirement namespace="gecko.rest.addon">
       <directive name="filter" value="(gecko.rest.addon=messagebody.emf)"/>
     </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+    <requirement namespace="osgi.extender">
+      <directive name="filter" value="(osgi.extender=osgi.configurator)"/>
+    </requirement>
     <requirement namespace="osgi.extender">
       <directive name="filter" value="(&amp;(osgi.extender=osgi.component)(version&gt;=1.4.0)(!(version&gt;=2.0.0)))"/>
     </requirement>
     <requirement namespace="osgi.implementation">
       <directive name="filter" value="(&amp;(osgi.implementation=osgi.jaxrs)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
     </requirement>
-    <requirement namespace="osgi.ee">
-      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    <requirement namespace="osgi.service">
+      <directive name="filter" value="(objectClass=org.gecko.talk.car.whiteboard.api.CarWhiteboard)"/>
+      <directive name="effective" value="active"/>
     </requirement>
   </resource>
   <resource>
     <capability namespace="osgi.identity">
       <attribute name="license" value="Eclipse Public License 1.0"/>
+      <attribute name="copyright" value="Data In Motion GmbH all rights reserved"/>
       <attribute name="osgi.identity" value="org.gecko.talk.car.model"/>
       <attribute name="type" value="osgi.bundle"/>
       <attribute name="version" value="1.0.0.SNAPSHOT" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.eclipse.emf.common.util,org.eclipse.emf.ecore"/>
+      <attribute name="bundle-symbolic-name" value="org.gecko.talk.car.model"/>
+      <attribute name="bundle-version" value="1.0.0.SNAPSHOT" type="Version"/>
+      <attribute name="version" value="1.0.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.talk.car.model.car"/>
+      <attribute name="bnd.hashes" value="67508,-2121240906,1425955268,-1836420622,2109312021,-1907849355,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.eclipse.emf.common.notify,org.eclipse.emf.common.util,org.eclipse.emf.ecore,org.eclipse.emf.ecore.impl,org.gecko.talk.car.model.car"/>
+      <attribute name="bundle-symbolic-name" value="org.gecko.talk.car.model"/>
+      <attribute name="bundle-version" value="1.0.0.SNAPSHOT" type="Version"/>
+      <attribute name="version" value="1.0.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.talk.car.model.car.impl"/>
+      <attribute name="bnd.hashes" value="1372649974,-2077170700,-2090926286,-1352773675,-1623155915" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.eclipse.emf.common.notify,org.eclipse.emf.common.notify.impl,org.eclipse.emf.common.util,org.eclipse.emf.ecore,org.eclipse.emf.ecore.resource,org.eclipse.emf.ecore.resource.impl,org.eclipse.emf.ecore.util,org.eclipse.emf.ecore.xmi.impl,org.gecko.talk.car.model.car"/>
+      <attribute name="bundle-symbolic-name" value="org.gecko.talk.car.model"/>
+      <attribute name="bundle-version" value="1.0.0.SNAPSHOT" type="Version"/>
+      <attribute name="version" value="1.0.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.talk.car.model.car.util"/>
+      <attribute name="bnd.hashes" value="-1073944689,-309920504,1118589218,1294078984" type="List&lt;Long&gt;"/>
     </capability>
     <capability namespace="osgi.wiring.bundle">
       <attribute name="bundle-version" value="1.0.0.SNAPSHOT" type="Version"/>
@@ -147,24 +185,6 @@
     <capability namespace="osgi.wiring.host">
       <attribute name="bundle-version" value="1.0.0.SNAPSHOT" type="Version"/>
       <attribute name="osgi.wiring.host" value="org.gecko.talk.car.model"/>
-    </capability>
-    <capability namespace="osgi.wiring.package">
-      <directive name="uses" value="org.eclipse.emf.common.util,org.eclipse.emf.ecore"/>
-      <attribute name="version" value="1.0.0" type="Version"/>
-      <attribute name="osgi.wiring.package" value="org.gecko.talk.car.model.car"/>
-    </capability>
-    <capability namespace="osgi.wiring.package">
-      <directive name="uses" value="org.eclipse.emf.common.notify,org.eclipse.emf.common.util,org.eclipse.emf.ecore,org.eclipse.emf.ecore.impl,org.gecko.talk.car.model.car"/>
-      <attribute name="version" value="1.0.0" type="Version"/>
-      <attribute name="osgi.wiring.package" value="org.gecko.talk.car.model.car.impl"/>
-    </capability>
-    <capability namespace="osgi.wiring.package">
-      <directive name="uses" value="org.eclipse.emf.common.notify,org.eclipse.emf.common.notify.impl,org.eclipse.emf.common.util,org.eclipse.emf.ecore,org.eclipse.emf.ecore.resource,org.eclipse.emf.ecore.resource.impl,org.eclipse.emf.ecore.util,org.eclipse.emf.ecore.xmi.impl,org.gecko.talk.car.model.car"/>
-      <attribute name="version" value="1.0.0" type="Version"/>
-      <attribute name="osgi.wiring.package" value="org.gecko.talk.car.model.car.util"/>
-    </capability>
-    <capability namespace="osgi.service">
-      <attribute name="objectClass" value="org.gecko.emf.osgi.EPackageConfigurator" type="List&lt;String&gt;"/>
     </capability>
     <capability namespace="emf.configurator">
       <attribute name="name" value="car"/>
@@ -178,57 +198,73 @@
       <attribute name="emf.configurator" value="resourceSet"/>
     </capability>
     <capability namespace="osgi.content">
-      <attribute name="size" value="49789" type="Long"/>
+      <attribute name="size" value="49784" type="Long"/>
       <attribute name="url" value="org.gecko.talk.car.model/org.gecko.talk.car.model-1.0.0.jar"/>
       <attribute name="mime" value="application/vnd.osgi.bundle"/>
-      <attribute name="osgi.content" value="3016569A35A9102A25082321AAA24D6DBED2346642982A3BC0A4F7CBB3A15086"/>
+      <attribute name="osgi.content" value="A75C55940F2AB78ED4FE6CE7816E0EFD0E31B20BABBE5BC2EDE5AB0673781BA7"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <directive name="uses" value="org.gecko.emf.osgi"/>
+      <attribute name="objectClass" value="org.gecko.emf.osgi.EPackageConfigurator" type="List&lt;String&gt;"/>
     </capability>
     <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.emf.common.notify))"/>
+      <directive name="filter" value="(osgi.wiring.package=org.eclipse.emf.common.notify)"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.common.notify"/>
     </requirement>
     <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.emf.common.notify.impl))"/>
+      <directive name="filter" value="(osgi.wiring.package=org.eclipse.emf.common.notify.impl)"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.common.notify.impl"/>
     </requirement>
     <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.emf.common.util))"/>
+      <directive name="filter" value="(osgi.wiring.package=org.eclipse.emf.common.util)"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.common.util"/>
     </requirement>
     <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.emf.ecore))"/>
+      <directive name="filter" value="(osgi.wiring.package=org.eclipse.emf.ecore)"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.ecore"/>
     </requirement>
     <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.emf.ecore.impl))"/>
+      <directive name="filter" value="(osgi.wiring.package=org.eclipse.emf.ecore.impl)"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.ecore.impl"/>
     </requirement>
     <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.emf.ecore.plugin))"/>
+      <directive name="filter" value="(osgi.wiring.package=org.eclipse.emf.ecore.plugin)"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.ecore.plugin"/>
     </requirement>
     <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.emf.ecore.resource))"/>
+      <directive name="filter" value="(osgi.wiring.package=org.eclipse.emf.ecore.resource)"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.ecore.resource"/>
     </requirement>
     <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.emf.ecore.resource.impl))"/>
+      <directive name="filter" value="(osgi.wiring.package=org.eclipse.emf.ecore.resource.impl)"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.ecore.resource.impl"/>
     </requirement>
     <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.emf.ecore.util))"/>
+      <directive name="filter" value="(osgi.wiring.package=org.eclipse.emf.ecore.util)"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.ecore.util"/>
     </requirement>
     <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.emf.ecore.xmi.impl))"/>
+      <directive name="filter" value="(osgi.wiring.package=org.eclipse.emf.ecore.xmi.impl)"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.ecore.xmi.impl"/>
     </requirement>
     <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.gecko.emf.osgi)(&amp;(version&gt;=2.1.0)(!(version&gt;=3.0.0))))"/>
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.gecko.emf.osgi)(version&gt;=2.1.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.emf.osgi"/>
     </requirement>
     <requirement namespace="emf.core">
       <directive name="filter" value="(&amp;(emf.core=osgi)(version&gt;=2.0.0)(!(version&gt;=3.0.0)))"/>
     </requirement>
-    <requirement namespace="osgi.extender">
-      <directive name="filter" value="(&amp;(osgi.extender=osgi.component)(version&gt;=1.4.0)(!(version&gt;=2.0.0)))"/>
-    </requirement>
     <requirement namespace="osgi.ee">
       <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+    <requirement namespace="osgi.extender">
+      <directive name="filter" value="(&amp;(osgi.extender=osgi.component)(version&gt;=1.4.0)(!(version&gt;=2.0.0)))"/>
     </requirement>
   </resource>
   <resource>
     <capability namespace="osgi.identity">
       <attribute name="license" value="Eclipse Public License 1.0"/>
+      <attribute name="copyright" value="Data In Motion GmbH all rights reserved"/>
       <attribute name="osgi.identity" value="org.gecko.talk.car.remote.config"/>
       <attribute name="type" value="osgi.bundle"/>
       <attribute name="version" value="1.0.0.SNAPSHOT" type="Version"/>
@@ -245,7 +281,7 @@
       <attribute name="size" value="7596" type="Long"/>
       <attribute name="url" value="org.gecko.talk.car.remote.config/org.gecko.talk.car.remote.config-1.0.0.jar"/>
       <attribute name="mime" value="application/vnd.osgi.bundle"/>
-      <attribute name="osgi.content" value="33512140DC4597DD435A6E080177AA6AD9202FB4B49C8784F5244AA9606B2500"/>
+      <attribute name="osgi.content" value="0B2A0DB7027937B45A9E1FDE56AE3CC1D2CF806F4EA0A6DEBE56B6FD66EA7280"/>
     </capability>
     <requirement namespace="osgi.extender">
       <directive name="filter" value="(osgi.extender=osgi.configurator)"/>
@@ -254,9 +290,18 @@
   <resource>
     <capability namespace="osgi.identity">
       <attribute name="license" value="Eclipse Public License 1.0"/>
+      <attribute name="copyright" value="Data In Motion GmbH all rights reserved"/>
       <attribute name="osgi.identity" value="org.gecko.talk.car.service.api"/>
       <attribute name="type" value="osgi.bundle"/>
       <attribute name="version" value="1.0.0.SNAPSHOT" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.gecko.talk.car.model.car"/>
+      <attribute name="bundle-symbolic-name" value="org.gecko.talk.car.service.api"/>
+      <attribute name="bundle-version" value="1.0.0.SNAPSHOT" type="Version"/>
+      <attribute name="version" value="1.0.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.talk.car.service.api"/>
+      <attribute name="bnd.hashes" value="-1267362311,-1923478059" type="List&lt;Long&gt;"/>
     </capability>
     <capability namespace="osgi.wiring.bundle">
       <attribute name="bundle-version" value="1.0.0.SNAPSHOT" type="Version"/>
@@ -266,19 +311,15 @@
       <attribute name="bundle-version" value="1.0.0.SNAPSHOT" type="Version"/>
       <attribute name="osgi.wiring.host" value="org.gecko.talk.car.service.api"/>
     </capability>
-    <capability namespace="osgi.wiring.package">
-      <directive name="uses" value="org.gecko.talk.car.model.car"/>
-      <attribute name="version" value="1.0.0" type="Version"/>
-      <attribute name="osgi.wiring.package" value="org.gecko.talk.car.service.api"/>
-    </capability>
     <capability namespace="osgi.content">
-      <attribute name="size" value="10688" type="Long"/>
+      <attribute name="size" value="10702" type="Long"/>
       <attribute name="url" value="org.gecko.talk.car.service.api/org.gecko.talk.car.service.api-1.0.0.jar"/>
       <attribute name="mime" value="application/vnd.osgi.bundle"/>
-      <attribute name="osgi.content" value="A2D9024D7696060F50913A40284903BACDC35565356E79B6D5F91178D8E05D47"/>
+      <attribute name="osgi.content" value="81A67A66822182BE4AB8854A2386ED3D7E5E536235674735490BF55057340945"/>
     </capability>
     <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.gecko.talk.car.model.car)(&amp;(version&gt;=1.0.0)(!(version&gt;=2.0.0))))"/>
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.gecko.talk.car.model.car)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.talk.car.model.car"/>
     </requirement>
     <requirement namespace="osgi.ee">
       <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
@@ -287,6 +328,7 @@
   <resource>
     <capability namespace="osgi.identity">
       <attribute name="license" value="Eclipse Public License 1.0"/>
+      <attribute name="copyright" value="Data In Motion GmbH all rights reserved"/>
       <attribute name="osgi.identity" value="org.gecko.talk.car.service.config"/>
       <attribute name="type" value="osgi.bundle"/>
       <attribute name="version" value="1.0.0.SNAPSHOT" type="Version"/>
@@ -303,7 +345,7 @@
       <attribute name="size" value="7521" type="Long"/>
       <attribute name="url" value="org.gecko.talk.car.service.config/org.gecko.talk.car.service.config-1.0.0.jar"/>
       <attribute name="mime" value="application/vnd.osgi.bundle"/>
-      <attribute name="osgi.content" value="E0F72363EA48E00BD7DD2AEFEE25B9072386EC9312E096D9C320C5A55C72D0AB"/>
+      <attribute name="osgi.content" value="472592F12156BA1851684F22D72FAD2FB8A53D8DA28005D995C1E00D6F26B423"/>
     </capability>
     <requirement namespace="osgi.extender">
       <directive name="filter" value="(osgi.extender=osgi.configurator)"/>
@@ -312,9 +354,18 @@
   <resource>
     <capability namespace="osgi.identity">
       <attribute name="license" value="Eclipse Public License 1.0"/>
+      <attribute name="copyright" value="Data In Motion GmbH all rights reserved"/>
       <attribute name="osgi.identity" value="org.gecko.talk.car.whiteboard.api"/>
       <attribute name="type" value="osgi.bundle"/>
       <attribute name="version" value="1.0.0.SNAPSHOT" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.gecko.talk.car.model.car"/>
+      <attribute name="bundle-symbolic-name" value="org.gecko.talk.car.whiteboard.api"/>
+      <attribute name="bundle-version" value="1.0.0.SNAPSHOT" type="Version"/>
+      <attribute name="version" value="1.0.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.talk.car.whiteboard.api"/>
+      <attribute name="bnd.hashes" value="718612273,-1923478059" type="List&lt;Long&gt;"/>
     </capability>
     <capability namespace="osgi.wiring.bundle">
       <attribute name="bundle-version" value="1.0.0.SNAPSHOT" type="Version"/>
@@ -324,19 +375,15 @@
       <attribute name="bundle-version" value="1.0.0.SNAPSHOT" type="Version"/>
       <attribute name="osgi.wiring.host" value="org.gecko.talk.car.whiteboard.api"/>
     </capability>
-    <capability namespace="osgi.wiring.package">
-      <directive name="uses" value="org.gecko.talk.car.model.car"/>
-      <attribute name="version" value="1.0.0" type="Version"/>
-      <attribute name="osgi.wiring.package" value="org.gecko.talk.car.whiteboard.api"/>
-    </capability>
     <capability namespace="osgi.content">
-      <attribute name="size" value="10888" type="Long"/>
+      <attribute name="size" value="10901" type="Long"/>
       <attribute name="url" value="org.gecko.talk.car.whiteboard.api/org.gecko.talk.car.whiteboard.api-1.0.0.jar"/>
       <attribute name="mime" value="application/vnd.osgi.bundle"/>
-      <attribute name="osgi.content" value="4C03C60BE2FC5C2BAD3B36A1E28D1853D2BD19A6E539DCF7E8F0429658EE74DE"/>
+      <attribute name="osgi.content" value="A9676654EF831C904FD0BB675531CD4C0097337DBC77690D6F2545FDBBB2C3E3"/>
     </capability>
     <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.gecko.talk.car.model.car)(&amp;(version&gt;=1.0.0)(!(version&gt;=2.0.0))))"/>
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.gecko.talk.car.model.car)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.talk.car.model.car"/>
     </requirement>
     <requirement namespace="osgi.ee">
       <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
@@ -345,6 +392,7 @@
   <resource>
     <capability namespace="osgi.identity">
       <attribute name="license" value="Eclipse Public License 1.0"/>
+      <attribute name="copyright" value="Data In Motion GmbH all rights reserved"/>
       <attribute name="osgi.identity" value="org.gecko.talk.car.service.impl"/>
       <attribute name="type" value="osgi.bundle"/>
       <attribute name="version" value="1.0.0.SNAPSHOT" type="Version"/>
@@ -357,26 +405,29 @@
       <attribute name="bundle-version" value="1.0.0.SNAPSHOT" type="Version"/>
       <attribute name="osgi.wiring.host" value="org.gecko.talk.car.service.impl"/>
     </capability>
-    <capability namespace="osgi.service">
-      <attribute name="objectClass" value="org.gecko.talk.car.service.api.CarServiceApi" type="List&lt;String&gt;"/>
-    </capability>
     <capability namespace="osgi.content">
-      <attribute name="size" value="12712" type="Long"/>
+      <attribute name="size" value="12740" type="Long"/>
       <attribute name="url" value="org.gecko.talk.car.service.impl/org.gecko.talk.car.service.impl-1.0.0.jar"/>
       <attribute name="mime" value="application/vnd.osgi.bundle"/>
-      <attribute name="osgi.content" value="3A801680DA288A559FEF208ED6BD033338438397D4F18FD20B371091CE607D5C"/>
+      <attribute name="osgi.content" value="5084E770D2D70824DDACDB038B5D0C253FABBD76A9312E7707F783972AC085E1"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <directive name="uses" value="org.gecko.talk.car.service.api"/>
+      <attribute name="objectClass" value="org.gecko.talk.car.service.api.CarServiceApi" type="List&lt;String&gt;"/>
     </capability>
     <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.gecko.talk.car.model.car)(&amp;(version&gt;=1.0.0)(!(version&gt;=2.0.0))))"/>
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.gecko.talk.car.model.car)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.talk.car.model.car"/>
     </requirement>
     <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.gecko.talk.car.service.api)(&amp;(version&gt;=1.0.0)(!(version&gt;=1.1.0))))"/>
-    </requirement>
-    <requirement namespace="osgi.extender">
-      <directive name="filter" value="(&amp;(osgi.extender=osgi.component)(version&gt;=1.4.0)(!(version&gt;=2.0.0)))"/>
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.gecko.talk.car.service.api)(version&gt;=1.0.0)(!(version&gt;=1.1.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.talk.car.service.api"/>
     </requirement>
     <requirement namespace="osgi.ee">
       <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+    <requirement namespace="osgi.extender">
+      <directive name="filter" value="(&amp;(osgi.extender=osgi.component)(version&gt;=1.4.0)(!(version&gt;=2.0.0)))"/>
     </requirement>
   </resource>
 </repository>
