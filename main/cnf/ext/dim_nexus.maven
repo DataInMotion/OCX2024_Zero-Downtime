@@ -31,9 +31,10 @@ org.gecko.emf:org.gecko.emf.osgi.model.info.api:1.0.0
 org.gecko.emf:org.gecko.emf.osgi.model.info.impl:1.0.0
 org.gecko.ma:org.gecko.adapter.eventadmin:1.0.0
 org.gecko.ma:org.gecko.osgi.messaging:2.0.0
-org.gecko.rest:org.gecko.osgi.hk2.repackaged:2.5.2
-org.gecko.rest:org.gecko.rest.jersey.api:3.0.0
-org.gecko.rest:org.gecko.rest.jersey.impl:1.0.9
+org.geckoprojects.jaxrs:org.gecko.rest.jersey:5.0.0-SNAPSHOT
+org.geckoprojects.jaxrs:org.gecko.rest.jersey.sse:5.0.0-SNAPSHOT
+org.geckoprojects.jaxrs:org.gecko.rest.jersey.multipart:5.0.0-SNAPSHOT
+org.geckoprojects.jaxrs:org.gecko.rest.bnd.library:5.0.0-SNAPSHOT
 org.gecko.runtime:org.gecko.runtime.application:2.0.5
 org.gecko.runtime:org.gecko.runtime.boot:1.1.1
 org.gecko.runtime:org.gecko.runtime.config:1.0.3
@@ -58,11 +59,10 @@ org.gecko.rsa:org.gecko.rsa.api:2.1.0
 org.gecko.rsa:org.gecko.rsa.model:1.0.2
 org.gecko.rsa:org.gecko.rsa.core:2.0.0
 org.gecko.rsa:org.gecko.rsa.discovery:1.0.0
-org.gecko.rsa:org.gecko.rsa.provider:1.1.6-SNAPSHOT
+org.gecko.rsa:org.gecko.rsa.provider:1.1.5
 org.gecko.rsa:org.gecko.rsa.discovery.ma:2.0.1
 org.gecko.rsa:org.gecko.rsa.discovery.config:1.0.2
 
-com.rabbitmq:amqp-client:5.6.0
 org.slf4j:slf4j-simple:1.7.25
 commons-logging:commons-logging:1.2
 org.osgi:org.osgi.util.converter:1.0.1

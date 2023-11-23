@@ -19,12 +19,10 @@ javax.activation:javax.activation-api:1.2.0
 com.sun.activation:javax.activation:1.2.0
 
 org.apache.felix:org.apache.felix.configurator:1.0.8
-org.apache.felix:org.apache.felix.scr:2.1.14
 org.apache.felix:org.apache.felix.configadmin:1.9.10
 org.apache.felix:org.apache.felix.coordinator:1.0.2
 org.apache.felix:org.apache.felix.eventadmin:1.5.0
 org.apache.felix:org.apache.felix.fileinstall:3.6.4
-org.apache.felix:org.apache.felix.framework:6.0.1
 org.apache.felix:org.apache.felix.gogo.command:1.0.2
 org.apache.felix:org.apache.felix.gogo.runtime:1.1.0
 org.apache.felix:org.apache.felix.gogo.shell:1.1.0
@@ -129,3 +127,8 @@ com.rabbitmq:amqp-client:5.5.1
 org.apache.aries.rsa:org.apache.aries.rsa.core:1.16.1
 org.apache.aries.rsa:org.apache.aries.rsa.spi:1.16.1
 org.apache.aries.rsa:org.apache.aries.rsa.topology-manager:1.16.1
+
+com.rabbitmq:amqp-client:5.6.0
+org.apache.felix:org.apache.felix.framework:7.0.5
+org.apache.felix:org.apache.felix.scr:2.2.6
+org.osgi:org.osgi.service.component:1.5.0

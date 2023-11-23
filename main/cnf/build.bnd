@@ -1,2 +1,4 @@
 ## Place your settings in ext/.
 cnf: ${workspace}/cnf
+
+-library: geckoJersey

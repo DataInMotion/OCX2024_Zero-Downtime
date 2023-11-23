@@ -8,8 +8,6 @@
 	org.eclipse.emf.ecore,\
 	org.eclipse.emf.ecore.xmi
 
--testpath: \
-	${junit}
 	
 -includeresource model/=model,\
 	plugin.properties=plugin.properties
