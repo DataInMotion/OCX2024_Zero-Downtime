@@ -31,6 +31,7 @@ public class CustomerCarService implements CarServiceApi{
 		Person customer = CarFactory.eINSTANCE.createPerson();
 		customer.setName("The Customer");
 		car.setOwner(customer);
+		car.setSourceContainer("Customer");
 		return car;
 	}
 

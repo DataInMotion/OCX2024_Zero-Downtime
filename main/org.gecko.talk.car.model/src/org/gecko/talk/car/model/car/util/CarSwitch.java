@@ -2,12 +2,12 @@
  */
 package org.gecko.talk.car.model.car.util;
 
-import org.gecko.talk.car.model.car.*;
-
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.util.Switch;
+
+import org.gecko.talk.car.model.car.*;
 
 /**
  * <!-- begin-user-doc -->

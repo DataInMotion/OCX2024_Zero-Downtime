@@ -1,14 +1,16 @@
-/**
+/*
  */
 package org.gecko.talk.car.model.car.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import org.gecko.talk.car.model.car.Car;
 import org.gecko.talk.car.model.car.CarPackage;
 import org.gecko.talk.car.model.car.Person;
@@ -272,7 +274,6 @@ public class CarImpl extends MinimalEObjectImpl.Container implements Car {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {

@@ -15,14 +15,14 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
-import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
+import jakarta.ws.rs.GET;
+import jakarta.ws.rs.Path;
+import jakarta.ws.rs.Produces;
+import jakarta.ws.rs.core.MediaType;
+import jakarta.ws.rs.core.Response;
 
-import org.gecko.emf.osgi.json.annotation.RequireEMFJson;
-import org.gecko.emf.osgi.rest.jaxrs.annotation.RequireEMFMessageBodyReaderWriter;
+import org.gecko.emf.json.annotation.RequireEMFJson;
+import org.gecko.emf.rest.annotations.RequireEMFMessageBodyReaderWriter;
 import org.gecko.talk.car.model.car.Car;
 import org.gecko.talk.car.model.car.CarFactory;
 import org.gecko.talk.car.model.car.CarResponse;
@@ -30,8 +30,8 @@ import org.gecko.talk.car.whiteboard.api.CarWhiteboard;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 import org.osgi.service.component.annotations.ServiceScope;
-import org.osgi.service.jaxrs.whiteboard.propertytypes.JaxrsName;
-import org.osgi.service.jaxrs.whiteboard.propertytypes.JaxrsResource;
+import org.osgi.service.jakartars.whiteboard.propertytypes.JakartarsName;
+import org.osgi.service.jakartars.whiteboard.propertytypes.JakartarsResource;
 
 /**
  * <p>
@@ -42,8 +42,8 @@ import org.osgi.service.jaxrs.whiteboard.propertytypes.JaxrsResource;
  */
 @RequireEMFJson
 @RequireEMFMessageBodyReaderWriter
-@JaxrsResource
-@JaxrsName("car")
+@JakartarsResource
+@JakartarsName("car")
 @Component(service = CarResource.class, enabled = true, scope = ServiceScope.PROTOTYPE)
 @Path("/")
 public class CarResource {

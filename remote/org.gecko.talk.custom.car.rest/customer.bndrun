@@ -3,21 +3,7 @@
 -runprovidedcapabilities: ${native_capability}
 
 -runproperties: \
-	logback.configurationFile=file:${.}/logback.xml,\
 	org.osgi.service.http.port=-1
-
--runpath: \
-	ch.qos.logback.classic;version='[1.2.3,1.2.4)',\
-	ch.qos.logback.core;version='[1.2.3,1.2.4)',\
-	jul.to.slf4j;version='[1.7.25,1.7.26)',\
-	slf4j.api;version='[1.7.25,1.7.26)'
-	
--runsystempackages: \
-	org.slf4j;version=1.7.25,\
-	org.slf4j.helpers;version=1.7.25,\
-	org.slf4j.spi;version=1.7.25
-
-
 
 -runrequires: \
 	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.shell)',\
@@ -31,73 +17,94 @@
 	bnd.identity;id='org.gecko.rsa.discovery.ma',\
 	bnd.identity;id='org.gecko.rsa.model',\
 	bnd.identity;id='org.gecko.rsa.provider',\
-	bnd.identity;id='org.gecko.adapter.mqtt',\
 	bnd.identity;id='org.gecko.talk.custom.car.rest.config',\
 	bnd.identity;id='org.gecko.talk.car.remote.config',\
 	bnd.identity;id='org.gecko.talk.custom.car.rest',\
-	bnd.identity;id='org.gecko.talk.car.whiteboard.api',\
-	bnd.identity;id='org.gecko.talk.car.whiteboard.impl',\
-	bnd.identity;id='org.gecko.talk.custom.car.service'
+	bnd.identity;id='org.gecko.talk.custom.car.service',\
+	bnd.identity;id='org.gecko.adapter.amqp.core'
 	
--resolve.effective: active;skip:="osgi.service"
+-resolve.effective: active
 -runbundles: \
-	org.apache.felix.configadmin;version='[1.9.10,1.9.11)',\
-	org.apache.felix.configurator;version='[1.0.8,1.0.9)',\
 	org.gecko.rsa.provider;version='[1.1.6,1.1.7)',\
-	org.apache.felix.eventadmin;version='[1.5.0,1.5.1)',\
-	org.apache.felix.gogo.command;version='[1.0.2,1.0.3)',\
-	org.apache.felix.gogo.runtime;version='[1.1.0,1.1.1)',\
-	org.apache.felix.gogo.shell;version='[1.1.0,1.1.1)',\
-	org.apache.felix.scr;version='[2.1.14,2.1.15)',\
-	org.eclipse.emf.common;version='[2.15.0,2.15.1)',\
-	org.eclipse.emf.ecore;version='[2.17.0,2.17.1)',\
-	org.eclipse.emf.ecore.xmi;version='[2.15.0,2.15.1)',\
-	org.eclipse.paho.client.mqttv3;version='[1.2.0,1.2.1)',\
-	org.gecko.adapter.mqtt;version='[1.0.3,1.0.4)',\
-	org.gecko.core.api;version='[1.0.0,1.0.1)',\
-	org.gecko.core.pushstream;version='[1.1.0,1.1.1)',\
-	org.gecko.emf.osgi.api;version='[3.1.2,3.1.3)',\
-	org.gecko.emf.osgi.component;version='[2.2.7,2.2.8)',\
-	org.gecko.emf.osgi.ecore;version='[2.2.4,2.2.5)',\
-	org.gecko.osgi.messaging;version='[3.1.0,3.1.1)',\
-	org.gecko.rsa.api;version='[2.1.0,2.1.1)',\
-	org.gecko.rsa.core;version='[2.0.0,2.0.1)',\
-	org.gecko.rsa.discovery;version='[1.0.0,1.0.1)',\
-	org.gecko.rsa.discovery.ma;version='[2.0.1,2.0.2)',\
-	org.gecko.rsa.model;version='[1.0.2,1.0.3)',\
 	org.gecko.talk.car.remote.config;version='[1.0.0,1.0.1)',\
 	org.gecko.talk.custom.car.rest.config;version=snapshot,\
-	org.osgi.util.converter;version='[1.0.1,1.0.2)',\
-	org.osgi.util.function;version='[1.1.0,1.1.1)',\
-	org.osgi.util.promise;version='[1.1.0,1.1.1)',\
-	org.osgi.util.pushstream;version='[1.0.0,1.0.1)',\
-	com.fasterxml.jackson.core.jackson-annotations;version='[2.9.7,2.9.8)',\
-	com.fasterxml.jackson.core.jackson-core;version='[2.9.7,2.9.8)',\
-	com.fasterxml.jackson.core.jackson-databind;version='[2.9.7,2.9.8)',\
-	com.fasterxml.jackson.dataformat.jackson-dataformat-properties;version='[2.9.7,2.9.8)',\
-	com.fasterxml.jackson.dataformat.jackson-dataformat-yaml;version='[2.9.7,2.9.8)',\
-	com.sun.activation.javax.activation;version='[1.2.0,1.2.1)',\
-	javax.annotation-api;version='[1.3.2,1.3.3)',\
-	javax.validation.api;version='[1.1.0,1.1.1)',\
-	jaxb-api;version='[2.3.1,2.3.2)',\
-	org.apache.felix.http.jetty;version='[4.0.6,4.0.7)',\
-	org.apache.felix.http.servlet-api;version='[1.1.2,1.1.3)',\
-	org.emfjson.jackson;version='[1.1.0,1.1.1)',\
-	org.gecko.emf.osgi.json;version='[1.2.2,1.2.3)',\
-	org.gecko.emf.osgi.rest;version='[1.2.1,1.2.2)',\
-	org.gecko.osgi.hk2.repackaged;version='[2.5.2,2.5.3)',\
-	org.gecko.rest.jersey.api;version='[3.0.0,3.0.1)',\
-	org.gecko.rest.jersey.impl;version='[1.0.9,1.0.10)',\
 	org.gecko.talk.car.model;version='[1.0.0,1.0.1)',\
 	org.gecko.talk.car.service.api;version='[1.0.0,1.0.1)',\
 	org.gecko.talk.custom.car.rest;version=snapshot,\
-	org.glassfish.jersey.bundles.jaxrs-ri;version='[2.26.0,2.26.1)',\
-	org.yaml.snakeyaml;version='[1.23.0,1.23.1)',\
 	org.gecko.talk.car.whiteboard.api;version='[1.0.0,1.0.1)',\
 	org.gecko.talk.car.whiteboard.impl;version='[1.0.0,1.0.1)',\
-	javax.activation-api;version='[1.2.0,1.2.1)',\
 	org.apache.aries.rsa.core;version='[1.16.1,1.16.2)',\
 	org.apache.aries.rsa.spi;version='[1.16.1,1.16.2)',\
 	org.apache.aries.rsa.topology-manager;version='[1.16.1,1.16.2)',\
-	org.gecko.talk.custom.car.service;version=snapshot
--resolve: auto
+	org.gecko.talk.custom.car.service;version=snapshot,\
+	com.fasterxml.jackson.core.jackson-annotations;version='[2.15.2,2.15.3)',\
+	com.fasterxml.jackson.core.jackson-core;version='[2.15.2,2.15.3)',\
+	com.fasterxml.jackson.core.jackson-databind;version='[2.15.2,2.15.3)',\
+	com.fasterxml.jackson.dataformat.jackson-dataformat-properties;version='[2.14.1,2.14.2)',\
+	com.fasterxml.jackson.dataformat.jackson-dataformat-yaml;version='[2.14.1,2.14.2)',\
+	com.fasterxml.jackson.datatype.jackson-datatype-jsr310;version='[2.14.1,2.14.2)',\
+	jakarta.activation-api;version='[2.1.2,2.1.3)',\
+	jakarta.annotation-api;version='[2.1.1,2.1.2)',\
+	jakarta.inject.jakarta.inject-api;version='[2.0.1,2.0.2)',\
+	jakarta.validation.jakarta.validation-api;version='[3.0.2,3.0.3)',\
+	jakarta.ws.rs-api;version='[3.1.0,3.1.1)',\
+	jakarta.xml.bind-api;version='[4.0.0,4.0.1)',\
+	javassist;version='[3.29.2,3.29.3)',\
+	org.apache.aries.spifly.dynamic.framework.extension;version='[1.3.7,1.3.8)',\
+	org.apache.commons.logging;version='[1.2.0,1.2.1)',\
+	org.apache.felix.cm.json;version='[2.0.6,2.0.7)',\
+	org.apache.felix.configadmin;version='[1.9.26,1.9.27)',\
+	org.apache.felix.configurator;version='[1.0.18,1.0.19)',\
+	org.apache.felix.gogo.command;version='[1.1.2,1.1.3)',\
+	org.apache.felix.gogo.runtime;version='[1.1.6,1.1.7)',\
+	org.apache.felix.gogo.shell;version='[1.1.4,1.1.5)',\
+	org.apache.felix.http.jetty;version='[5.1.24,5.1.25)',\
+	org.apache.felix.http.servlet-api;version='[3.0.0,3.0.1)',\
+	org.apache.felix.scr;version='[2.2.12,2.2.13)',\
+	org.eclipse.emf.common;version='[2.29.0,2.29.1)',\
+	org.eclipse.emf.ecore;version='[2.35.0,2.35.1)',\
+	org.eclipse.emf.ecore.xmi;version='[2.36.0,2.36.1)',\
+	org.eclipse.emfcloud.emfjson-jackson;version='[2.2.0,2.2.1)',\
+	org.eclipse.osgitech.rest;version='[1.2.3,1.2.4)',\
+	org.eclipse.osgitech.rest.jetty;version='[1.2.3,1.2.4)',\
+	org.eclipse.osgitech.rest.sse;version='[1.2.3,1.2.4)',\
+	org.eclipse.parsson.jakarta.json;version='[1.1.7,1.1.8)',\
+	org.gecko.emf.json;version='[1.5.1,1.5.2)',\
+	org.gecko.emf.osgi.component.minimal;version='[6.2.0,6.2.1)',\
+	org.gecko.emf.osgi.model.info;version='[6.2.0,6.2.1)',\
+	org.gecko.emf.rest.jakartars;version='[2.3.0,2.3.1)',\
+	org.gecko.osgi.messaging;version='[3.2.0,3.2.1)',\
+	org.gecko.rsa.api;version='[2.1.1,2.1.2)',\
+	org.gecko.rsa.core;version='[2.0.1,2.0.2)',\
+	org.gecko.rsa.discovery;version='[2.0.0,2.0.1)',\
+	org.gecko.rsa.discovery.ma;version='[2.0.2,2.0.3)',\
+	org.gecko.rsa.model;version='[1.1.0,1.1.1)',\
+	org.gecko.util.common;version='[1.2.0,1.2.1)',\
+	org.gecko.util.pushstream;version='[1.2.0,1.2.1)',\
+	org.glassfish.hk2.api;version='[3.0.5,3.0.6)',\
+	org.glassfish.hk2.external.aopalliance-repackaged;version='[3.0.5,3.0.6)',\
+	org.glassfish.hk2.locator;version='[3.0.5,3.0.6)',\
+	org.glassfish.hk2.osgi-resource-locator;version='[1.0.3,1.0.4)',\
+	org.glassfish.hk2.utils;version='[3.0.5,3.0.6)',\
+	org.glassfish.jersey.containers.jersey-container-servlet;version='[3.1.3,3.1.4)',\
+	org.glassfish.jersey.containers.jersey-container-servlet-core;version='[3.1.3,3.1.4)',\
+	org.glassfish.jersey.core.jersey-client;version='[3.1.3,3.1.4)',\
+	org.glassfish.jersey.core.jersey-common;version='[3.1.3,3.1.4)',\
+	org.glassfish.jersey.core.jersey-server;version='[3.1.3,3.1.4)',\
+	org.glassfish.jersey.inject.jersey-hk2;version='[3.1.3,3.1.4)',\
+	org.glassfish.jersey.media.jersey-media-jaxb;version='[3.1.3,3.1.4)',\
+	org.glassfish.jersey.media.jersey-media-sse;version='[3.1.3,3.1.4)',\
+	org.objectweb.asm;version='[9.6.0,9.6.1)',\
+	org.osgi.service.cm;version='[1.6.1,1.6.2)',\
+	org.osgi.service.component;version='[1.5.1,1.5.2)',\
+	org.osgi.service.event;version='[1.4.1,1.4.2)',\
+	org.osgi.service.jakartars;version='[2.0.0,2.0.1)',\
+	org.osgi.util.converter;version='[1.0.9,1.0.10)',\
+	org.osgi.util.function;version='[1.2.0,1.2.1)',\
+	org.osgi.util.promise;version='[1.3.0,1.3.1)',\
+	org.osgi.util.pushstream;version='[1.1.0,1.1.1)',\
+	org.yaml.snakeyaml;version='[1.33.0,1.33.1)',\
+	slf4j.api;version='[1.7.36,1.7.37)',\
+	slf4j.jcl;version='[1.7.36,1.7.37)',\
+	com.rabbitmq.client;version='[5.20.0,5.20.1)',\
+	org.gecko.adapter.amqp.core;version='[2.2.1,2.2.2)'

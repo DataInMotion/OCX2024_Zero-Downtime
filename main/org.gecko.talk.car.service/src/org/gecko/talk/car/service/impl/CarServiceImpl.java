@@ -17,15 +17,21 @@ import org.gecko.talk.car.model.car.Person;
 import org.gecko.talk.car.service.api.CarServiceApi;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
+import org.osgi.service.component.annotations.ConfigurationPolicy;
+import org.osgi.service.component.annotations.Deactivate;
+import org.osgi.service.metatype.annotations.Designate;
+import org.osgi.service.metatype.annotations.ObjectClassDefinition;
 
-@Component(name="CarService", immediate = true, property = {
+@Component(name="CarService", property = {
 		 "service.exported.interfaces=*",
          "gecko.rsa.id=echo"
-})
+}, configurationPolicy = ConfigurationPolicy.OPTIONAL)
+@Designate(ocd = CarServiceImpl.Config.class)
 public class CarServiceImpl implements CarServiceApi{
 
 	private Car theCar;
 	
+	@ObjectClassDefinition
 	private @interface Config {
 		String car_type() default "Trabant 601"; 
 		String owner_name() default "Max Mustermann";
@@ -44,6 +50,7 @@ public class CarServiceImpl implements CarServiceApi{
 		System.out.println("started");
 	}
 	
+	@Deactivate
 	public void deactivate() {
 		System.out.println("cleaning up " + theCar.toString());
 		theCar = null;

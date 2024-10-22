@@ -2,8 +2,6 @@
  */
 package org.gecko.talk.car.model.car.impl;
 
-import org.gecko.talk.car.model.car.*;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
@@ -11,6 +9,8 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
+
+import org.gecko.talk.car.model.car.*;
 
 /**
  * <!-- begin-user-doc -->

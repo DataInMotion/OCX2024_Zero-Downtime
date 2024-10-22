@@ -1,40 +1,17 @@
--buildpath: \
-	osgi.annotation;version=7.0.0,\
-	osgi.core;version=6.0,\
-	osgi.cmpn;version=7.0,\
-	org.gecko.emf.osgi.annotation;version=latest,\
-	org.gecko.emf.osgi.api;version=latest,\
-	org.eclipse.emf.common,\
-	org.eclipse.emf.ecore,\
-	org.eclipse.emf.ecore.xmi
+# sets the usually required buildpath, you can extend it with the normal -buildpath to your liking
+-library: enable-emf
 
-	
--includeresource model/=model,\
-	plugin.properties=plugin.properties
+# The code generation takes a bit of time and makes the build a bit slower.
+# It might be a good idea to put comments around it, when you don't need it
+-generate:\
+	model/car.genmodel;\
+		generate=geckoEMF;\
+		genmodel=model/car.genmodel;\
+		output=src
+# Add this attribute to find some logging information
+#		logfile=test.log;\
 
-javac.source: 1.8
-javac.target: 1.8
-
-Manifest-Version: 1.0
-Bundle-ManifestVersion: 2
-Bundle-Name: %pluginName
-#Bundle-SymbolicName: org.gecko.talk.car.model
-Bundle-Version: 1.0.0.SNAPSHOT
-Bundle-ClassPath: .
-Bundle-Vendor: %providerName
-Bundle-Localization: plugin
-#Provide-Capability: emf.model.config;emf.model=car
-
-Private-Package: \
-	org.gecko.talk.car.model.car.configuration
-
-Export-Package: \
-	org.gecko.talk.car.model.car,\
- 	org.gecko.talk.car.model.car.impl,\
- 	org.gecko.talk.car.model.car.util
-
-Import-Package: \
-	,\
-	!org.gecko.talk.car.model.car.*,\
- 	*
-
+# If this is not done with a instruction namespace, bnd would think you like
+# to take full control over whats exported and imported and will ignore @Export
+# Bundle Annotations		
+-includeresource.model: model=model

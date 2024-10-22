@@ -2,14 +2,14 @@
  */
 package org.gecko.talk.car.model.car.util;
 
-import org.gecko.talk.car.model.car.*;
-
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 
 import org.eclipse.emf.ecore.EObject;
+
+import org.gecko.talk.car.model.car.*;
 
 /**
  * <!-- begin-user-doc -->

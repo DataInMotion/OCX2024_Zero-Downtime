@@ -1,11 +1,15 @@
-/**
+/*
  */
 package org.gecko.talk.car.model.car;
 
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+
+import org.gecko.emf.osgi.annotation.provide.EPackage;
+
+import org.osgi.annotation.versioning.ProviderType;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,7 +27,9 @@ import org.eclipse.emf.ecore.EReference;
  * @model kind="package"
  * @generated
  */
-public interface CarPackage extends EPackage {
+@ProviderType
+@EPackage(uri = CarPackage.eNS_URI, genModel = "/model/car.genmodel", genModelSourceLocations = {"model/car.genmodel","org.gecko.talk.car.model/model/car.genmodel"}, ecore="/model/car.ecore", ecoreSourceLocations="/model/car.ecore")
+public interface CarPackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
@@ -363,6 +369,7 @@ public interface CarPackage extends EPackage {
 		 * @generated
 		 */
 		EClass CAR = eINSTANCE.getCar();
+
 		/**
 		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
@@ -370,6 +377,7 @@ public interface CarPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute CAR__ID = eINSTANCE.getCar_Id();
+
 		/**
 		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
@@ -377,6 +385,7 @@ public interface CarPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute CAR__TYPE = eINSTANCE.getCar_Type();
+
 		/**
 		 * The meta object literal for the '<em><b>Owner</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
@@ -384,6 +393,7 @@ public interface CarPackage extends EPackage {
 		 * @generated
 		 */
 		EReference CAR__OWNER = eINSTANCE.getCar_Owner();
+
 		/**
 		 * The meta object literal for the '<em><b>Source Container</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
@@ -391,6 +401,7 @@ public interface CarPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute CAR__SOURCE_CONTAINER = eINSTANCE.getCar_SourceContainer();
+
 		/**
 		 * The meta object literal for the '{@link org.gecko.talk.car.model.car.impl.PersonImpl <em>Person</em>}' class.
 		 * <!-- begin-user-doc -->
@@ -400,6 +411,7 @@ public interface CarPackage extends EPackage {
 		 * @generated
 		 */
 		EClass PERSON = eINSTANCE.getPerson();
+
 		/**
 		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
@@ -407,6 +419,7 @@ public interface CarPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute PERSON__ID = eINSTANCE.getPerson_Id();
+
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
@@ -414,6 +427,7 @@ public interface CarPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute PERSON__NAME = eINSTANCE.getPerson_Name();
+
 		/**
 		 * The meta object literal for the '{@link org.gecko.talk.car.model.car.impl.CarResponseImpl <em>Response</em>}' class.
 		 * <!-- begin-user-doc -->
@@ -423,6 +437,7 @@ public interface CarPackage extends EPackage {
 		 * @generated
 		 */
 		EClass CAR_RESPONSE = eINSTANCE.getCarResponse();
+
 		/**
 		 * The meta object literal for the '<em><b>Cars</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
@@ -430,6 +445,7 @@ public interface CarPackage extends EPackage {
 		 * @generated
 		 */
 		EReference CAR_RESPONSE__CARS = eINSTANCE.getCarResponse_Cars();
+
 		/**
 		 * The meta object literal for the '<em><b>Result Size</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->

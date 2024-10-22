@@ -1,0 +1,34 @@
+-buildpath: \
+	osgi.annotation;version='7.0',\
+	osgi.core;version='7.0',\
+	osgi.cmpn;version='7.0',\
+	org.gecko.osgi.messaging;version=latest,\
+	org.gecko.rsa.api;version=latest,\
+	org.gecko.rsa.core;version=latest,\
+	org.gecko.rsa.model;version=latest,\
+	org.eclipse.emf.ecore,\
+	org.eclipse.emf.common,\
+	org.eclipse.emf.ecore.xmi,\
+	org.gecko.emf.osgi.api;version=latest,\
+	org.apache.aries.rsa.spi,\
+	org.apache.aries.rsa.topology-manager,\
+	org.apache.aries.rsa.core,\
+	org.gecko.util.common,\
+	org.gecko.util.pushstream
+
+javac.source: 1.8
+javac.target: 1.8
+
+-includeresource: data=data/
+
+Bundle-Version: 1.1.6.SNAPSHOT
+Private-Package: \
+	org.gecko.rsa.provider,\
+	org.gecko.rsa.provider.ser,\
+	org.gecko.rsa.provider.marker,\
+	org.gecko.rsa.provider.stream
+
+Bundle-Copyright: Data In Motion Consulting GmbH
+Bundle-License: Eclipse Public License v1.0
+Bundle-Vendor: Data In Motion Consulting GmbH
+-privatepackage: org.gecko.rsa.provider.classloader

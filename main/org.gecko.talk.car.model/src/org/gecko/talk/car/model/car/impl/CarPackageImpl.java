@@ -3,17 +3,17 @@
 package org.gecko.talk.car.model.car.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
-import org.gecko.talk.car.model.car.Person;
-import org.gecko.talk.car.model.car.CarFactory;
-import org.gecko.talk.car.model.car.CarPackage;
-
-import org.gecko.talk.car.model.car.CarResponse;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.EReference;
+
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+
 import org.gecko.talk.car.model.car.Car;
+import org.gecko.talk.car.model.car.CarFactory;
+import org.gecko.talk.car.model.car.CarPackage;
+import org.gecko.talk.car.model.car.CarResponse;
+import org.gecko.talk.car.model.car.Person;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,18 +28,21 @@ public class CarPackageImpl extends EPackageImpl implements CarPackage {
 	 * @generated
 	 */
 	private EClass carEClass = null;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass personEClass = null;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass carResponseEClass = null;
+
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
@@ -58,7 +61,6 @@ public class CarPackageImpl extends EPackageImpl implements CarPackage {
 	private CarPackageImpl() {
 		super(eNS_URI, CarFactory.eINSTANCE);
 	}
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

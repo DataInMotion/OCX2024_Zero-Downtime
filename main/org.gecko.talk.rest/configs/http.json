@@ -1,0 +1,15 @@
+{
+	":configurator:resource-version": 1,
+	"org.apache.felix.http~car": {
+		"org.osgi.service.http.port": "8081",
+		"org.osgi.service.http.host": "0.0.0.0",
+		"org.apache.felix.http.context_path": "car/",
+		"org.apache.felix.http.name": "car",
+		"org.apache.felix.http.runtime.init.id": "carHttp"
+	},
+	"JakartarsServletWhiteboardRuntimeComponent~car": {
+		"jersey.jakartars.whiteboard.name": "car.rest",
+		"jersey.context.path": "rest",
+		"osgi.http.whiteboard.target": "(id=carHttp)"
+	}
+}

@@ -1,4 +1,4 @@
-/**
+/*
  */
 package org.gecko.talk.car.model.car.impl;
 
